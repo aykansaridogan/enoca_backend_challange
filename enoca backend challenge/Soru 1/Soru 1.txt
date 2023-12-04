@@ -1,0 +1,39 @@
+MVC (Model-View-Controller), bir yazılım mimarisi ve tasarım desenidir. Temel olarak, bir uygulamanın farklı kısımlarını mantıksal olarak bölmeye ve organize etmeye yardımcı olur. 
+
+Model (Model): Veri ve iş mantığının bulunduğu kısımdır. Veritabanı işlemleri, veri işleme mantığı ve veri kaynakları bu bölümde yer alır. 
+
+View (Görünüm): Kullanıcı arayüzünün (UI) görsel temsili burada bulunur. Kullanıcıya sunulan verilerin gösterildiği, kullanıcıyla etkileşimde bulunulan kısım burasıdır. 
+
+Controller (Denetleyici): Kullanıcının etkileşimde bulunduğu ve işlemlerin gerçekleştirildiği kısımdır. Kullanıcıdan gelen istekleri alır, Model'i günceller ve sonuçları View'e ileterek kullanıcıya sunar. 
+
+MVC'nin kullanılmasının bazı avantajları şunlardır: 
+
+Modülerlik ve Kolay Bakım: MVC, kodun parçalara bölünmesini sağlar. Bu sayede her bir kısım bağımsız olarak geliştirilebilir ve bakımı kolaylaşır. 
+
+Test Edilebilirlik: Her bir bileşen ayrı ayrı test edilebilir. Model, View ve Controller'ın bağımsız olması test süreçlerini kolaylaştırır. 
+
+ 
+
+Java'da MVC, genellikle şu şekilde uygulanır: 
+
+Model: Java'da, Model veri işlemlerini ve iş mantığını temsil eder. Veritabanı işlemleri ve veri işleme kodları burada bulunabilir. Java'da bu genellikle sınıflar ve veri işleme mantığıyla temsil edilir. 
+
+ 
+
+View: Java'da View, kullanıcı arayüzünü temsil eder. HTML, JSP (JavaServer Pages), JavaFX gibi teknolojiler kullanılarak görsel arayüz oluşturulabilir. 
+
+ 
+
+Controller: Java'da Controller, kullanıcı isteklerini karşılayan ve iş mantığını yürüten kısımdır. Servletler veya Spring MVC gibi framework'ler kullanılarak HTTP isteklerini alabilir, Model'i güncelleyebilir ve uygun View'e yönlendirebilir. 
+
+ Spring MVC gibi popüler Java framework'leri, MVC yapısını uygulamak için geniş imkanlar sunar. Bu framework'ler, Controller'ı yönetmek, istekleri işlemek ve View ile Model arasındaki iletişimi kolaylaştırmak için yardımcı olabilir. 
+
+OOP: Nesne Yönelimli Programlama , katmanlı bir  yapıyı destekleyen bir yazılım geliştirme paradigmasıdır. 
+
+OOP Katmanları: 1) Entity Layer (Varlık) : Bu katman, veri modelini ve uygulama içindeki nesnelerin temsiliyetini içerir.   
+
+   2) Business Logic Layer ( İş Mantığı ) : Bu katman, uygulamanın ana mantığını içerir. 
+
+   3) Data Access Layer ( Veri Erişim ) : Bu katman, veritabanına veya dış kaynaklara erişimi sağlar. 
+
+ 4) User Interface Layer (Kulanıcı ara yüzü ) : Bu katman, kullanıcıyla etkileşimde bulunulan katmandır 

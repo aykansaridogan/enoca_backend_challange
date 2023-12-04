@@ -1,0 +1,40 @@
+a) Sirket Ekleme:
+
+HTTP Metodu: POST
+Endpoint: http://localhost:8080/api/sirketler
+
+JSON formatı : 
+{
+    "adi": "ABC Company"
+    // Diğer şirket özellikleri
+}
+Beklenen Cevap: HTTP Status 201 Created ve eklenen şirketin bilgileri.
+
+b) Tüm Şirketleri Listeleme:
+
+HTTP Metodu: GET
+Endpoint: http://localhost:8080/api/sirketler
+Beklenen Cevap: HTTP Status 200 OK ve tüm şirketlerin listesi.
+
+c) Belirli Bir Şirketi Getirme:
+
+HTTP Metodu: GET
+Endpoint: http://localhost:8080/api/sirketler/{sirket_id}
+Beklenen Cevap: HTTP Status 200 OK ve istenen şirketin bilgileri.
+
+
+d) HTTP Metodu: PUT
+Endpoint: http://localhost:8080/api/sirketler/{sirket_id}
+Body (JSON Formatında): 
+{
+    "adi": "Yeni Şirket Adı"
+    // Güncellenen şirket özellikleri
+}
+Beklenen Cevap: HTTP Status 200 OK ve güncellenen şirketin bilgileri.
+
+e)Belirli Bir Şirketi Silme:
+
+HTTP Metodu: DELETE
+Endpoint: http://localhost:8080/api/sirketler/{sirket_id}
+Beklenen Cevap: HTTP Status 204 No Content veya HTTP Status 404 Not Found (şirket bulunamazsa).
+

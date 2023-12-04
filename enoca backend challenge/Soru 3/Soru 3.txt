@@ -1,0 +1,7 @@
+Web sayfasını yenilemeden güncel bilgiyi anlık olarak ekrana yansıtmak için JavaScript kullanabiliriz. Bu, web sayfasının dinamik olarak güncellenmesini sağlar.  Bunları yapmak için birkaç yöntem var :  
+
+a) AJAX : Javascript’in AJAX özelliğiyle, belirli aralıklarla veya belir bir olay gerçekleştiğinde sunucudan veri alınabilir. Örneğin ; XMLHttpRequest veya modern tarayıcılar için fetch API'sini kullanarak sunucudan veri alabilir ve bu veriyi kullanarak sayfadaki belirli bir alanı güncelleyebilirsiniz. 
+
+b) Web Sockets Kullanımı : Sürekli bir bağlantı  üzerinden sunucu ve istemci arasında veri alış verişi yapmamızı sağlar 
+
+c) Server-Sent Events: Sunucu , istemciye düzenli aralıklarla veya olaylar gerçekleştirdiğinde veri gönderir. İstemci bu olayları dinleyerek gelen verileri kullanarak sayfayı günceller

@@ -1,0 +1,5 @@
+Solr sorgularında genellikle istekler HTTP GET üzerinden yapılır ve bir sorgu formatına uygun olmalı. 2020 Ocak ayından sonraki verileri getirmek için aşağıdaki gibi sorgu yazılabilir:  
+
+http://example/select?q=updateAt:[2020-01-01 T00:00:00Z TO *] 
+
+Bu sorgu, Solr'a updatedAt alanı için 2020 Ocak ayından sonraki tüm verileri getirmesini söyler. Burada q parametresi, sorgunun kendisi için kullanılır. updatedAt:[2020-01-01T00:00:00Z TO *] kısmı, updatedAt alanının belirli bir tarih aralığını belirtir. 2020-01-01T00:00:00Z tarihinden itibaren * (yıldız) işaretiyle belirtilen sona kadar (yani şu anki zamana kadar) olan verileri getirecektir. 

@@ -1,0 +1,51 @@
+Kod:  
+
+public class Aykan { 
+
+    public static void main(String[] args) { 
+
+        // Yıldız desenini yazdırmak için ilgili metodu çağır 
+
+        printStarPattern(); 
+
+    } 
+
+  
+
+    // Yıldız desenini yazdıran metot 
+
+    private static void printStarPattern() { 
+
+        final int maxRows = 6; 
+
+        // Satır sayısı kadar döngü 
+
+        for (int row = 1; row <= maxRows; row++) { 
+
+            int numberOfStars = row * 2 - 1; 
+
+            // Verilen yıldız sayısını yazdır 
+
+            printStars(numberOfStars); 
+
+            System.out.println(); // Her satırın sonunda yeni bir satıra geç 
+
+        } 
+
+    } 
+
+  
+
+    // Belirli bir sayıda yıldız yazdıran metot 
+
+    private static void printStars(int count) { 
+
+        for (int i = 0; i < count; i++) { 
+
+            System.out.print("*"); 
+
+        } 
+
+    } 
+
+} 

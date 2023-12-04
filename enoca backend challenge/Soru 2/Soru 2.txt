@@ -1,0 +1,56 @@
+Farklı programlama dilleri veya platformlar arasında iletişim kurmak için genellikle birkaç farklı yol bulunur:   
+
+API Kullanımı: RESTful API, SOAP, GraphQL gibi iletişim protokolleri kullanılabilir. 
+
+Veri Serileştirme: JSON veya XML gibi evrensel veri formatlarını kullanarak dönüştürebilirz. 
+
+Ortak Veri Tabanı Kulanımı 
+
+Ortak Veri Formatları: Her iki platform da bu formata uygun olarak veri alışverişi yapabilir.  
+
+Örn; RESTful API kullanarak Java'da yazılmış bir platform ile C# kullanılan bir platform arasında iletişim kurmak 
+
+Java'da RESTful API oluşturmak için genellikle Spring Framework'ü kullanırız. Öncelikle, Java'da bir RESTful servis oluşturulmalı. 
+"" import org.springframework.web.bind.annotation.*;
+
+@RestController
+public class SampleController {
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Merhaba, bu Java'dan bir RESTful servis!";
+    }
+}
+""
+
+
+Yukarıdaki kod, "/hello" endpoint'ine gelen GET isteğine cevap olarak "Merhaba, bu Java'dan bir RESTful servis!" metnini döndüren basit bir Spring Controller'ı temsil ediyor. 
+
+C# tarafında Java’ya istek yapacak istemci kodu aşağıda ki gibidir: 
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        using var client = new HttpClient();
+        
+        try
+        {
+            HttpResponseMessage response = await client.GetAsync("http://java_service_url/hello");
+            
+            response.EnsureSuccessStatusCode(); // İstek başarılıysa devam et
+            
+            string responseBody = await response.Content.ReadAsStringAsync();
+            
+            Console.WriteLine("Java RESTful servisinden gelen yanıt: " + responseBody);
+        }
+        catch (HttpRequestException e)
+        {
+            Console.WriteLine("Hata oluştu: " + e.Message);
+        }
+    }
+}
+Bu C# kodu, belirtilen URL'ye bir GET isteği gönderir ve dönen cevabı konsola yazdırır. 

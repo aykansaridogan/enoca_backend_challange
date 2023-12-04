@@ -1,0 +1,27 @@
+a-) SSH ile Sunucuya Erişim: Komut istemcisini açarız ve şu kodu yazarız :  
+
+ssh kullanici_adi@ip_adresi –p port_numarasi 
+
+Burada kullanici_adi yerine sunucuya erişim için gerekli olan kullanıcıyı yazarız ve ip_adresinin sunucunun IP adresini , port numarasına ise SSH bağlantı noktamızı gireriz. Örnek; 
+
+ssh username@246.897.513.0 -p 21 
+
+Ardından şifreyi girdikten sonra sunucuya erişmiş oluruz. 
+
+ 
+
+b-) Dosya Transferi:  
+
+Sunucuya Dosya Atma ( SCP) , komut istemcisini açarız ve aşağıdaki komutu gireriz: 
+
+scp /local/dizin/dosya kullanici_adi@ip_adresi:/uzak/dizin 
+
+Bu komut yerel sunucunuzdaki dosyanızı sunucuda bulunan diğer konuma kopyalar. 
+
+Sunucudan Dosya Alma ( SCP ) : scp kullanici_adi@ip_adresi:/uzak/dizin/dosya /local/dizin 
+
+Scp ek olarak, SFTP ile de aktarım yapılabilir. SFTP interaktif bir dosya transfer protokolüdür. Komut istemcisine sftp kullanici_adi@ip_adresi komutunu girerek sunucuya bağlanabilirsin. Ardından put komutuyla dosyaları sunucuya, get komutuyla da sunucudan yerel makinene aktarabilirsin. 
+
+ 
+
+ 

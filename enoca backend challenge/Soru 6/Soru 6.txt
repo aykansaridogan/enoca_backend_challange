@@ -1,0 +1,33 @@
+Adım 1: Proje Oluşturma
+
+Maven kullanarak boş bir Spring projesi oluşturdu.
+Bağımlılıklar arasında Spring Web ve Spring Data JPA gibi gerekli bağımlılıkları ekledim.
+
+Adım 2: Veritabanı Yapısının Oluşturulması
+PostgreSQL veritabanı oluşturdum.
+Şirketler ve çalışanlar gibi iki tablo oluşturdum.
+Bu tablolar arasında ilişki kurdum (Örneğin, çalışanlar tablosunda şirketlere referans veren sütun var).
+
+Adım 3: Spring ile Veritabanı Bağlantısı
+
+application.properties dosyasında veritabanı bağlantı bilgilerini ayarladım.
+Spring Data JPA kullanarak entity sınıflarını (Şirket ve Çalışan) ve ilişkilerini tanımladım.
+Repository sınıfları oluşturun ve bu sınıflar aracılığıyla veritabanı işlemlerini gerçekleştirecek metodları tanımladım.
+Adım 4: Servis Katmanının Oluşturulması
+
+Şirketler ve çalışanlar için ekleme, silme, güncelleme, listeleme gibi servis metodlarını oluşturdum.
+Bu servis metodları, repository sınıflarını kullanarak veritabanı işlemlerini gerçekleştirdim.
+İşlemler sonucunda dönecek olan işlem detaylarını veya isteğin başarılı olduğu/olmadığına dair bilgileri response olarak döndürdüm.
+
+Adım 5: Controller Katmanının Oluşturulması
+
+RESTful API endpoint'lerini oluşturacak controller sınıflarını hazırladım.
+Her bir HTTP isteği için gerekli servis metodlarını çağırın ve istemcilere uygun response'ları oluşturdum.
+Adım 6: Postman ile Test Etme
+
+Postman veya cURL gibi araçlar kullanarak oluşturduğunuz API endpoint'lerini test edin.
+Ekleme, silme, güncelleme, listeleme gibi işlemleri gerçekleştirin ve cevapları kontrol ettim.
+
+Adım 7: Dökümantasyon
+Projenin nasıl ayağa kaldırılacağı, servislerin nasıl kullanılacağına dair bir dökümantasyon hazırladım.
+MVC yapısını ve veritabanı işlemlerini anlatan detaylı açıklamalar ekledim.
